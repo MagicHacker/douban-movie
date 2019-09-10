@@ -1,0 +1,22 @@
+.homepage-wrap{
+  width: 100%;
+  height: 100%;
+}
+.homepage-search{
+  width: 100%;
+  height:100rpx;
+  background-color:#1AB16C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homepage-button{
+  width: 694rpx;
+  height: 60rpx;
+  background-color: #fff;
+  font-size: 24rpx;
+  color: #A9ACB5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

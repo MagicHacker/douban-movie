@@ -61,13 +61,5 @@ Page({
    */
   onShareAppMessage: function () {
     
-  },
-  /**
-   * 点击搜索
-   */
-  searchMovie: function () {
-    wx.navigateTo({
-      url: '/pages/search/index',
-    })
   }
 })

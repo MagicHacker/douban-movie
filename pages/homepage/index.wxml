@@ -1,1 +1,8 @@
-<view>首页</view>
+<view class="homepage-wrap">
+  <view class="homepage-search">
+    <button class="homepage-button" bindtap="searchMovie">
+      <icon type="search" color="#A9ACB5" size="12"/>
+      搜索
+    </button>
+  </view>
+</view>
