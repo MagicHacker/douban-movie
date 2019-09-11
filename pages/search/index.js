@@ -1,3 +1,4 @@
+const util = require('../../utils/util.js')
 Page({
 
   /**
@@ -61,5 +62,14 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+  // 搜索功能
+  inputSearch(event) {
+    // 添加防抖判断
+    util.debounce(this.fetchData(event.detail),1000)
+  },
+  // 查询数据
+  fetchData({value}) {
+    console.log(value)
   }
 })
