@@ -13,7 +13,17 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
-
+// 函数防抖
+const debounce = (fn, interval = 300) => {
+  let timeout = null
+  return function () {
+    clearTimeout(timeout)
+    timeout = setTimeout(() => {
+      fn.apply(this, arguments)
+    }, interval)
+  }
+}
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  debounce
 }
