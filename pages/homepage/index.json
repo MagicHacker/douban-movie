@@ -1,5 +1,8 @@
 {
   "navigationBarBackgroundColor":"#1AB16C",
   "navigationBarTextStyle":"white",
-  "navigationBarTitleText":"首页"
+  "navigationBarTitleText":"首页",
+  "usingComponents": {
+    "scroll-list":"/components/scroll-list/index"
+  }
 }

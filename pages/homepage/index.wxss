@@ -20,3 +20,27 @@
   justify-content: center;
   align-items: center;
 }
+.movie-list{
+  width: 100%;
+  margin: 20rpx 0rpx 0rpx 20rpx;
+}
+.movie-list-title{
+  width: 680rpx;
+  height: 40rpx;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0rpx 20rpx 20rpx 0rpx;
+  font-size: 32rpx;
+}
+.check-more{
+  width: 200rpx;
+  color: #1AB16C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+image{
+  width: 40rpx;
+  height: 40rpx;
+}

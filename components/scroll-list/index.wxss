@@ -1,0 +1,12 @@
+.list-wrap{
+  width: 100%;
+  height: 200rpx;
+  white-space: nowrap;
+}
+.list-movie-item{
+  width: 100rpx;
+  height: 160rpx;
+  background-color: #000;
+  margin-right: 40rpx;
+  display: inline-block;
+}
