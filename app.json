@@ -33,6 +33,6 @@
       }
     ]
   },
-  "debug": true,
+  "debug": false,
   "sitemapLocation": "sitemap.json"
 }
