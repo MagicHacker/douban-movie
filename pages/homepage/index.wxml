@@ -5,16 +5,18 @@
       搜索
     </button>
   </view>
-  <view class="movie-list">
+  <block wx:for="{{[1,2,3,4,5,6]}}" wx:key="*this">
+    <view class="movie-list">
     <view class="movie-list-title">
       <text>影院热映</text>
       <view class="check-more">
-        <text>
-        查看更多
-      </text>
-      <image src="/images/arrow-right.svg"></image>
+        <view>
+          查看更多
+        </view>
+        <image src="/images/arrow-right.svg"></image>
       </view>
     </view>
     <scroll-list></scroll-list>
   </view>
+  </block>
 </view>
