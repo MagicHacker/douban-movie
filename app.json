@@ -5,7 +5,8 @@
     "pages/mine/index",
     "pages/search/index",
     "pages/movie-more/index",
-    "pages/movie-detail/index"
+    "pages/movie-detail/index",
+    "pages/analysis-page/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

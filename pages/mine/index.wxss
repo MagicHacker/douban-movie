@@ -1,0 +1,53 @@
+.mine-wrap{
+  width: 100%;
+  height: 100%;
+}
+.mine-avatar{
+  width: 100%;
+  height: 240rpx;
+  background-color: #1AB16C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mine-login{
+  width: 240rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  text-align: center;
+  background-color: #fff;
+  line-height: 80rpx;
+}
+.mine-analysis{
+  width: 100%;
+  height: 240rpx;
+  box-sizing: border-box;
+  padding: 20rpx;
+  font-size: 28rpx;
+}
+.viewing-analysis,.book-analysis,.music-analysis{
+  width: 100%;
+  height: 160rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.mark-analysis{
+  width: 160rpx;
+  font-size: 24rpx;
+  color: #ccc;
+}
+.open-right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.open-right image{
+  width: 30rpx;
+  height: 30rpx;
+}

@@ -61,15 +61,5 @@ Page({
    */
   onShareAppMessage: function () {
     
-  },
-  // 用户登录功能
-  login() {
-    console.log('登录')
-  },
-  // 开启功能
-  openItem(event) {
-    wx.navigateTo({
-      url: '/pages/analysis-page/index',
-    })
   }
 })

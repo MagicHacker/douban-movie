@@ -1,1 +1,43 @@
-<view>我的</view>
+<view class="mine-wrap">
+  <view class="mine-avatar">
+    <button class="mine-login" bindtap="login">登录</button>
+  </view>
+  <view class="mine-analysis">
+    <view class="viewing-analysis">
+      <image src="/images/movie.svg"></image>
+      <view>
+        <view>观影分析</view>
+        <view>0看过</view>
+      </view>
+      <view class="mark-analysis">标记10部影片开启观影分析</view>
+      <view class="open-right" bindtap="openItem" data-item="movie">
+        <view>立即开启</view>
+        <image src="/images/open-right.svg"></image>
+      </view>
+    </view>
+    <view class="book-analysis">
+      <image src="/images/book.svg"></image>
+      <view>
+        <view>读书分析</view>
+        <view>0读过</view>
+      </view>
+      <view class="mark-analysis">标记10本书籍开启读书分析</view>
+      <view class="open-right" bindtap="openItem" data-item="book">
+        <view>立即开启</view>
+        <image src="/images/open-right.svg"></image>
+      </view>
+    </view>
+    <view class="music-analysis">
+      <image src="/images/music.svg"></image>
+      <view>
+        <view>音乐分析</view>
+        <view>0听过</view>
+      </view>
+      <view class="mark-analysis">标记10张唱片开启音乐分析</view>
+      <view class="open-right" bindtap="openItem" data-item="music">
+        <view>立即开启</view>
+        <image src="/images/open-right.svg"></image>
+      </view>
+    </view>
+  </view>
+</view>
