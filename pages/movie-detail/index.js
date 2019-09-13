@@ -61,19 +61,5 @@ Page({
    */
   onShareAppMessage: function () {
     
-  },
-  /**
-   * 点击搜索
-   */
-  searchMovie: function () {
-    wx.navigateTo({
-      url: '/pages/search/index',
-    })
-  },
-  // 查看更多
-  seeMore:function (event) {
-    wx.navigateTo({
-      url: '/pages/movie-more/index',
-    })
   }
 })

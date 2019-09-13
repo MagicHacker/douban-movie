@@ -3,7 +3,9 @@
     "pages/homepage/index",
     "pages/list/index",
     "pages/mine/index",
-    "pages/search/index"
+    "pages/search/index",
+    "pages/movie-more/index",
+    "pages/movie-detail/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
