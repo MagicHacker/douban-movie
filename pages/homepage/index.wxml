@@ -5,10 +5,10 @@
       搜索
     </button>
   </view>
-  <block wx:for="{{[1,2,3,4,5,6]}}" wx:key="*this" wx:for-index="index">
+  <block wx:for="{{categoryList}}" wx:key="*this" wx:for-index="index">
     <view class="movie-list">
       <view class="movie-list-title">
-        <text>影院热映</text>
+        <text>{{item}}</text>
         <view class="check-more" bindtap="seeMore" data-hi="{{index}}">
           <view>
             查看更多
