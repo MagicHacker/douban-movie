@@ -1,1 +1,8 @@
-<view>榜单</view>
+<view class="list-wrap">
+  <view wx:for="{{[1,2,3]}}" class="list-big-wrap" wx:key="*this">
+    <view class="list-big-item"></view>
+  </view>
+  <view wx:for="{{[1,2,3,4,5,6,7,8,9,10,11]}}" class="list-small-wrap" wx:key="*this">
+    <view class="list-small-item"></view>
+  </view>
+</view>

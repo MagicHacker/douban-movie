@@ -1,0 +1,23 @@
+.list-wrap{
+  width: 100%;
+  height: 100%;
+}
+.list-big-wrap{
+  width: 694rpx;
+  margin: 30rpx auto;
+}
+.list-big-item{
+  width: 100%;
+  height: 240rpx;
+  background-color: #000;
+}
+.list-small-wrap{
+  width: 694rpx;
+  margin: 20rpx auto;
+}
+.list-small-item{
+  width: 100%;
+  height: 160rpx;
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+}
