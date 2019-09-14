@@ -1,5 +1,8 @@
 <scroll-view scroll-x class="list-wrap">
-  <block wx:for="{{[0,1,2,3,4,5,6,7,8,9,10]}}" wx:key="*this">
-    <view class="list-movie-item" bindtap="movieDetail"></view>
+  <block wx:for="{{itemData}}" wx:key="*this">
+    <view class="list-movie-item" bindtap="movieDetail">
+      <image src="{{item.images.large}}"></image>
+      <view class="movie-item-title">{{item.title}}</view>
+    </view>
   </block>
 </scroll-view>

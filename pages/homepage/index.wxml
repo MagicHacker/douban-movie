@@ -5,18 +5,18 @@
       搜索
     </button>
   </view>
-  <block wx:for="{{categoryList}}" wx:key="*this" wx:for-index="index">
+  <block wx:for="{{homepageList}}" wx:key="*this" wx:for-index="index">
     <view class="movie-list">
       <view class="movie-list-title">
-        <text>{{item}}</text>
-        <view class="check-more" bindtap="seeMore" data-hi="{{index}}">
+        <text>{{item.title}}</text>
+        <view class="check-more" bindtap="seeMore" data-index="{{index}}">
           <view>
             查看更多
           </view>
           <image src="/images/arrow-right.svg"></image>
         </view>
       </view>
-      <scroll-list></scroll-list>
+      <scroll-list itemData="{{item.itemList}}"></scroll-list>
     </view>
   </block>
 </view>

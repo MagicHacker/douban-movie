@@ -3,9 +3,19 @@
   white-space: nowrap;
 }
 .list-movie-item{
-  width: 160rpx;
+  width: 200rpx;
   height: 240rpx;
-  background-color: #000;
   margin-right: 30rpx;
   display: inline-block;
+}
+.list-movie-item image{
+  width: 100%;
+  height: 100%;
+}
+.movie-item-title{
+  width: 100%;
+  margin-top: 20rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
