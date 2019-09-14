@@ -4,7 +4,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    avatar: "",
+    nickName: ""
   },
 
   /**
@@ -63,8 +64,11 @@ Page({
     
   },
   // 用户登录功能
-  login() {
-    console.log('登录')
+  login(e) {
+    this.setData({
+      avatar: e.detail.userInfo.avatarUrl,
+      nickName: e.detail.userInfo.nickName
+    })
   },
   // 开启功能
   openItem(event) {

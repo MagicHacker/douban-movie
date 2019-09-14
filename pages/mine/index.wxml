@@ -1,6 +1,12 @@
 <view class="mine-wrap">
   <view class="mine-avatar">
-    <button class="mine-login" bindtap="login">登录</button>
+    <block wx:if="{{avatar}}">
+      <view class="user-avatar">
+        <image src="{{avatar}}"></image>
+      </view>
+      <view class="user-nickname">{{nickName}}</view>
+    </block>
+    <button wx:else class="mine-login" bindgetuserinfo="login" open-type="getUserInfo">登录</button>
   </view>
   <view class="mine-analysis">
     <view class="viewing-analysis">
