@@ -1,8 +1,20 @@
 <view class="list-wrap">
-  <view wx:for="{{[1,2,3]}}" class="list-big-wrap" wx:key="*this">
+  <!-- <view wx:for="{{[1,2,3]}}" class="list-big-wrap" wx:key="*this">
     <view class="list-big-item"></view>
-  </view>
-  <view wx:for="{{[1,2,3,4,5,6,7,8,9,10,11]}}" class="list-small-wrap" wx:key="*this">
-    <view class="list-small-item"></view>
+  </view> -->
+  <view wx:for="{{movieList}}" class="list-small-wrap" wx:key="*this" wx:for-item="item">
+    <view class="list-small-item">
+      <image src="{{item.image}}"></image>
+      <view class="list-movie-item">
+        <view wx:for="{{item.itemList}}" wx:key="*this" wx:for-item="val" wx:for-index="idx">
+          <view wx:if="item.subject">
+            {{idx + 1}}. {{val.subject.title}} {{val.subject.rating.average}}分
+          </view>
+          <view wx:else>
+            {{idx + 1}}. {{val.title}} {{val.rating.average}}分
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
 </view>

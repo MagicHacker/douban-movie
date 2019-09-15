@@ -5,12 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    categoryList: ['影院热映', '即将上映', '畅销图书', '热门单曲榜'],
-    // 影院热映
-    theaterHot: [],
-    movieComing: [],
-    books: [],
-    popularMusic: [],
     homepageList: []
   },
 
@@ -31,10 +25,10 @@ Page({
    */
   onShow: function() {
     Promise.all([api.request('movie/in_theaters', 'GET', {
-      start: 1,
+      start: 0,
       count: 10
     }), api.request('movie/coming_soon', 'GET', {
-      start: 1,
+      start: 0,
       count: 10
     }), api.request('book/search', 'GET', {
       q: 'Python',
