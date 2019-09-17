@@ -11,12 +11,9 @@
   height: 240rpx;
   background-color: #000;
 }
-.list-small-wrap{
+.list-small-item{
   width: 694rpx;
   margin: 40rpx auto;
-}
-.list-small-item{
-  width: 100%;
   border: 1px solid #ccc;
   border-radius: 10rpx;
   display: flex;
@@ -24,7 +21,7 @@
 }
 .list-small-item image{
   width: 180rpx;
-  height: 100%;
+  height: 180rpx;
   border-radius: 8rpx;
 }
 .list-movie-item{

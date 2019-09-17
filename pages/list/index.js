@@ -37,20 +37,21 @@ Page({
       count: 3
     })]).then(data => {
       this.setData({
-        movieList: [{
+        movieList: [
+          {
             image: '/images/TOP250.png',
             itemList: data[0].subjects,
-            subject: false
+            isSubject: false
           },
           {
             image: '/images/mouth-word.jpg',
-            itemList: data[1].subjects,
-            subject: true
+            itemList: data[1].subjects.splice(0,3),
+            isSubject: true
           },
           {
             image: '/images/rank-list.jpg',
-            itemList: data[2].subjects,
-            subject: true
+            itemList: data[2].subjects.splice(0,3),
+            isSubject: true
           }
         ]
       })

@@ -2,19 +2,19 @@
   <!-- <view wx:for="{{[1,2,3]}}" class="list-big-wrap" wx:key="*this">
     <view class="list-big-item"></view>
   </view> -->
-  <view wx:for="{{movieList}}" class="list-small-wrap" wx:key="*this" wx:for-item="item">
-    <view class="list-small-item">
-      <image src="{{item.image}}"></image>
-      <view class="list-movie-item">
+  <view wx:for="{{movieList}}" class="list-small-item" wx:key="*this">
+    <image src="{{item.image}}"></image>
+    <view class="list-movie-item">
+      <block wx:if="{{!item.isSubject}}">
         <view wx:for="{{item.itemList}}" wx:key="*this" wx:for-item="val" wx:for-index="idx">
-          <view wx:if="item.subject">
-            {{idx + 1}}. {{val.subject.title}} {{val.subject.rating.average}}分
-          </view>
-          <view wx:else>
-            {{idx + 1}}. {{val.title}} {{val.rating.average}}分
-          </view>
+        {{idx + 1}}. {{val.title}} {{val.rating.average}}分
         </view>
-      </view>
+      </block>
+      <block wx:else>
+        <view wx:for="{{item.itemList}}" wx:key="*this" wx:for-item="subVal" wx:for-index="subIdx">
+        {{subIdx + 1}}. {{subVal.subject.title}} {{subVal.subject.rating.average}}分
+        </view>
+      </block>
     </view>
   </view>
 </view>
