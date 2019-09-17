@@ -69,9 +69,19 @@ Page({
   // 发送请求
   setRequest(url, method, params) {
     api.request(url, method, params).then(data => {
-      this.setData({
-        itemList: data.subjects
-      })
+      if (data.subjects) {
+        this.setData({
+          itemList: data.subjects
+        })
+      } else if (data.books) {
+        this.setData({
+          itemList: data.books
+        })
+      } else if (data.musics) {
+        this.setData({
+          itemList: data.musics
+        })
+      }
     })
   },
   // 拉取数据
