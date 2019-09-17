@@ -9,7 +9,6 @@
 }
 .movie-more-item{
   width: 200rpx;
-  height: 250rpx;
   margin-bottom: 30rpx;
 }
 .movie-more-item image{
@@ -19,10 +18,12 @@
 }
 .movie-more-item-title{
   width: 200rpx;
-  margin: 0 auto;
+  height: 40rpx;
+  margin-top: 20rpx;
   color: #000;
   font-size: 24rpx;
-  white-space:norwrap;
+  text-align: center;
+  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
