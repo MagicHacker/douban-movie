@@ -105,8 +105,9 @@ Page({
   },
   // 查看更多
   seeMore: function(event) {
+    const { index } = event.currentTarget.dataset
     wx.navigateTo({
-      url: '/pages/movie-more/index',
+      url: '/pages/movie-more/index?index=' + index,
     })
   }
 })

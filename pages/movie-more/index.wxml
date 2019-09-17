@@ -1,3 +1,8 @@
-<view>
-  查看更多
+<view class="movie-more-wrap">
+  <view class="movie-more-item" wx:for="{{itemList}}" wx:key="*this">
+    <image src="{{item.images.large}}"></image>
+    <view class="movie-more-item-title">
+      {{item.title}}
+    </view>
+  </view>
 </view>

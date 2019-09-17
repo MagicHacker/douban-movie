@@ -1,17 +1,21 @@
+const api = require('../../api/request.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    columnInex: 0,
+    itemList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.setData({
+      columnInex: options.index
+    })
   },
 
   /**
@@ -25,7 +29,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    this.fetchData()
   },
 
   /**
@@ -61,5 +65,42 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+  // 发送请求
+  setRequest(url, method, params) {
+    api.request(url, method, params).then(data => {
+      this.setData({
+        itemList: data.subjects
+      })
+    })
+  },
+  // 拉取数据
+  fetchData() {
+    switch (this.data.columnInex) {
+      case "0":
+        this.setRequest('movie/in_theaters', 'GET', {
+          start: 0,
+          count: 21
+        })
+        break
+      case "1":
+        this.setRequest('movie/coming_soon', 'GET', {
+          start: 0,
+          count: 21
+        })
+        break
+      case "2":
+        this.setRequest('book/search', 'GET', {
+          q: 'Python',
+          count: 21
+        })
+        break
+      case "3":
+        this.setRequest('music/search', 'GET', {
+          q: '欧美',
+          count: 21
+        })
+        break
+    }
   }
 })
