@@ -1,0 +1,28 @@
+<view class="list-detail-wrap">
+  <view class="list-detail-item" wx:for="{{itemList}}" wx:key="*this">
+    <view class="list-detail-rank">No.{{index + 1}}</view>
+    <block wx:if="{{isSubject}}">
+      <view class="list-detail-content">
+        <image src="{{item.subject.images.large}}" class="list-detail-photo"></image>
+        <view class="list-detail-profile">
+          <view>{{item.subject.title}} {{item.subject.rating.average}}</view>
+          <view>{{item.subject.genres[0]}}</view>
+        </view>
+        <view class="list-detail-line"></view>
+        <image src="/images/star-none.svg" class="list-detail-like"></image>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="list-detail-content">
+        <image src="{{item.images.large}}" class="list-detail-photo"></image>
+        <view class="list-detail-profile">
+          <view>{{item.title}} {{item.rating.average}}</view>
+          <view>{{item.genres[0]}}</view>
+        </view>
+        <view class="list-detail-line"></view>
+        <image src="/images/star-none.svg" class="list-detail-like"></image>
+      </view>
+    </block>
+    <view class="list-detail-comment">希望让人自由</view>
+  </view>
+</view>

@@ -91,5 +91,12 @@ Page({
    */
   onShareAppMessage: function() {
 
-  }
+  },
+  // 查看更多电影
+  seeMoreMovie(event) {
+    const { index } = event.currentTarget.dataset
+    wx.navigateTo({
+      url: '/pages/list-detail/index?index=' + index,
+    })
+  },
 })

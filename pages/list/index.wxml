@@ -2,7 +2,7 @@
   <!-- <view wx:for="{{[1,2,3]}}" class="list-big-wrap" wx:key="*this">
     <view class="list-big-item"></view>
   </view> -->
-  <view wx:for="{{movieList}}" class="list-small-item" wx:key="*this">
+  <view wx:for="{{movieList}}" class="list-small-item" data-index="{{index}}" wx:key="*this"        bindtap="seeMoreMovie">
     <image src="{{item.image}}"></image>
     <view class="list-movie-item">
       <block wx:if="{{!item.isSubject}}">
