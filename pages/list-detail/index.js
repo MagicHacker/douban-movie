@@ -103,5 +103,12 @@ Page({
           })
         })
     }
+  },
+  // 跳转到电影详情页
+  showMovieDetail(event) {
+    const { id } = event.currentTarget.dataset
+    wx.navigateTo({
+      url: '/pages/movie-detail/index?id=' + id,
+    })
   }
 })
