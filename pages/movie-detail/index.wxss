@@ -3,7 +3,7 @@
   height: 100%;
   box-sizing: border-box;
   padding: 20rpx;
-  background: #eae8e8;
+  background: #fafafa;
 }
 .movie-detail-card{
   width: 100%;
@@ -74,6 +74,10 @@
   align-items: center;
   justify-content: center;
 }
+.movie-detail-fraction image{
+  width: 32rpx;
+  height: 32rpx;
+}
 .movie-detail-profile{
   width: 100%;
   font-size: 28rpx;
@@ -91,7 +95,7 @@
   border-radius: 8rpx;
   box-sizing: border-box;
   padding: 20rpx 20rpx 0rpx;
-  margin-top: 40rpx;
+  margin-top: 30rpx;
 }
 .review-top{
   width: 100%;
@@ -114,6 +118,10 @@
   width: 20rpx;
   height: 20rpx;
 }
+.review-comment{
+  width: 100%;
+  margin: 20rpx 0rpx;
+}
 .review-person-info{
   width: 100%;
   display: flex;
@@ -123,6 +131,7 @@
   width: 40rpx;
   height: 40rpx;
   border-radius: 50%;
+  margin-right: 20rpx;
 }
 .review-avatar image{
   width: 40rpx;
@@ -139,4 +148,8 @@
 .review-like image{
   width: 40rpx;
   height: 40rpx;
+}
+.review-person-comment{
+  width: 100%;
+  margin: 20rpx 0rpx;
 }

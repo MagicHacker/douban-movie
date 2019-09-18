@@ -11,8 +11,9 @@ Component({
   },
   methods:{
     movieDetail(event) {
+      const { id } = event.currentTarget.dataset
       wx.navigateTo({
-        url: '/pages/movie-detail/index',
+        url: '/pages/movie-detail/index?id=' + id,
       })
     }
   }

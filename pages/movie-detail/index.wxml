@@ -1,12 +1,13 @@
 <view class="movie-detail-wrap">
   <view class="movie-detail-card">
     <view class="movie-detail-photo">
-      <image src="/images/list.png"></image>
+      <image src="{{movieItem.images.large}}"></image>
     </view>
     <view>
       <view class="movie-detail-title">
-        <view>罗小黑战记</view>
-        <view>动作 动画 奇幻/中国大陆/片长101分钟</view>
+        <view>{{movieItem.title}}</view>
+        <text wx:for="{{movieItem.genres}}" wx:key="*this">{{item}}</text>
+        {{movieItem.durations}}
       </view>
       <view class="movie-detail-btn">
         <button>想看</button>
@@ -20,35 +21,35 @@
       <image src="/images/open-right.svg"></image>
     </view>
     <view class="movie-detail-fraction">
-      <view>8.3</view>
-      <view>星星</view>
+      <view>{{movieItem.rating.average}}</view>
+      <image src="/images/star.svg"></image>
     </view>
   </view>
   <view class="movie-detail-profile">
     <view>简介</view>
-    <view>在熙攘的人类世界里，很多妖精隐匿其中，他们与人类相安无事地生活着。</view>
+    <view>{{movieItem.summary}}</view>
   </view>
   <view class="movie-detail-review">
     <view class="review-top">
       <view>短评</view>
       <view>
-        <view>全部 4119</view>
+        <view>全部 {{movieItem.comments_count}}</view>
         <image src="/images/open-right.svg"></image>
       </view>
     </view>
-    <view class="review-comment" wx:for="{{[1,2,3,4,5,6]}}" wx:key="*this">
+    <view class="review-comment" wx:for="{{movieItem.popular_comments}}" wx:key="*this" wx:for-item="popularComment">
       <view class="review-person-info">
         <view class="review-avatar">
-          <image src="/images/list.png"></image>
+          <image src="{{popularComment.author.avatar}}"></image>
         </view>
-        <view>二十二岛主</view>
+        <view>{{popularComment.author.name}}</view>
       </view>
       <view class="review-person-comment">
-        第一次看这个IP，还挺意外的，小黑的角色设计很独特。
+        {{popularComment.content}}
       </view>
       <view class="review-like">
         <image src="/images/like.svg"></image>
-        1314
+        {{popularComment.useful_count}}
       </view>
     </view>
   </view>
