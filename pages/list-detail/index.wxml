@@ -1,5 +1,5 @@
 <view class="list-detail-wrap">
-  <view class="list-detail-item" wx:for="{{itemList}}" wx:key="*this" data-id="{{item.id}}" bindtap="showMovieDetail">
+  <view class="list-detail-item" wx:for="{{itemList}}" wx:key="*this" data-id="{{isSubject ? item.subject.id : item.id}}" bindtap="showMovieDetail">
     <view class="list-detail-rank">No.{{index + 1}}</view>
     <block wx:if="{{isSubject}}">
       <view class="list-detail-content">
