@@ -9,7 +9,7 @@
           <view>{{item.subject.genres[0]}}</view>
         </view>
         <view class="list-detail-line"></view>
-        <image src="/images/star-none.svg" class="list-detail-like"></image>
+        <image src="{{isLike && likeIndex === index? '/images/star.svg' : '/images/star-none.svg'}}"      class="list-detail-like" data-index="{{index}}" catchtap="toggleLike"></image>
       </view>
     </block>
     <block wx:else>
@@ -20,7 +20,7 @@
           <view>{{item.genres[0]}}</view>
         </view>
         <view class="list-detail-line"></view>
-        <image src="/images/star-none.svg" class="list-detail-like"></image>
+        <image src="{{isLike && likeIndex === index? '/images/star.svg' : '/images/star-none.svg'}}"      class="list-detail-like" catchtap="toggleLike" data-index="{{index}}"></image>
       </view>
     </block>
     <view class="list-detail-comment">希望让人自由</view>

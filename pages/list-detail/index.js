@@ -7,7 +7,9 @@ Page({
   data: {
     itemIndex: 0,
     itemList: [],
-    isSubject: false
+    isSubject: false,
+    likeIndex: 0,
+    isLike: false
   },
 
   /**
@@ -109,6 +111,14 @@ Page({
     const { id } = event.currentTarget.dataset
     wx.navigateTo({
       url: '/pages/movie-detail/index?id=' + id,
+    })
+  },
+  // 切换星星的标注 待优化
+  toggleLike(event) {
+    const { index } = event.currentTarget.dataset
+    this.setData({
+      likeIndex: index,
+      isLike: !this.data.isLike
     })
   }
 })
